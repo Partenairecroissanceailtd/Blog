@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = [
+  { title: 'The Complete Guide to Construction Estimating for B2B Trades', path: '/tradequote/blog/construction-estimating-guide/', desc: 'Everything you need to know about B2B construction estimating — from material takeoffs to profit margins.', date: '2026-06-16', tag: 'Guide' },
+  { title: 'Roofing Cost Estimator: How to Price Commercial Roofing Jobs', path: '/tradequote/blog/roofing-cost-estimator/', desc: 'Learn how to accurately estimate commercial roofing costs including materials, labor, overhead, and profit margin.', date: '2026-06-16', tag: 'Roofing' },
+  { title: 'Siding Installation Cost Calculator: A Contractor\'s Guide', path: '/tradequote/blog/siding-installation-cost-calculator/', desc: 'Calculate siding installation costs accurately. Includes material pricing, labor rates, and waste factor calculations.', date: '2026-06-16', tag: 'Siding' },
+  { title: 'Concrete Estimating: How to Calculate Material & Labor Costs', path: '/tradequote/blog/concrete-estimating/', desc: 'Master concrete estimating for slabs, footings, columns, and walls. Includes volume calculations and pricing strategies.', date: '2026-06-16', tag: 'Concrete' },
+  { title: 'Commercial Bidding: How to Win More Construction Contracts', path: '/tradequote/blog/commercial-bidding/', desc: 'A complete guide to commercial construction bidding. Learn markup strategies, competitive pricing, and proposal best practices.', date: '2026-06-16', tag: 'Bidding' },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Partenaire Croissance Blog",
+  "description": "Construction estimating guides, B2B bidding strategies, and business operations tips for contractors and trades."
+};
+---
+<BaseLayout title="Blog — Construction Estimating & B2B Business Guides" description="Expert guides on construction estimating, commercial bidding, material pricing, and B2B business operations for contractors and trades." jsonLd={jsonLd}>
+  <section class="hero" style="padding-bottom:2rem">
+    <div class="container">
+      <h1>Construction Estimating <span style="color:#3b82f6">Guides & Resources</span></h1>
+      <p>Expert knowledge to help contractors, estimators, and tradespeople win more bids and price jobs accurately.</p>
+    </div>
+  </section>
+
+  <section class="container" style="padding-bottom:4rem">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:1.5rem">
+      {posts.map(post => (
+        <a href={post.path} style="text-decoration:none;color:inherit">
+          <div class="card blog-card">
+            <span class="tag" style="margin-bottom:0.75rem">{post.tag}</span>
+            <h3 style="margin-bottom:0.5rem;font-size:1.1rem;color:#e2e8f0">{post.title}</h3>
+            <p style="margin:0 0 0.5rem;font-size:0.9rem">{post.desc}</p>
+            <span style="font-size:0.8rem;color:#64748b">{post.date}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

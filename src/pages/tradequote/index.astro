@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TradeQuote Pro",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Android, Web",
+  "description": "Free B2B construction trade quote estimator with 12 calculators. Zero-login, instant estimates for roofing, siding, concrete, electrical, plumbing and more.",
+  "url": "https://www.partenairecroissance.com/tradequote/",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+};
+
+const features = [
+  { icon: "🏗️", title: "Roofing Estimator", desc: "Material, labor, and total project costs for commercial and residential roofing." },
+  { icon: "🧱", title: "Siding Calculator", desc: "Calculate siding material needs, labor hours, and total installation costs." },
+  { icon: "🏗️", title: "Concrete Estimator", desc: "Concrete volume, material cost, and labor estimates for slabs, footings, and walls." },
+  { icon: "⚡", title: "Electrical Estimator", desc: "Wiring, fixtures, and labor cost estimation for commercial electrical projects." },
+  { icon: "🔧", title: "Plumbing Estimator", desc: "Pipe, fixture, and labor cost estimates for plumbing installations." },
+  { icon: "🎨", title: "Painting Estimator", desc: "Paint quantity, labor hours, and total cost for interior and exterior painting." },
+  { icon: "🧹", title: "Drywall Estimator", desc: "Drywall sheets, mud, tape, and labor calculations for any project size." },
+  { icon: "🪟", title: "Window Installation", desc: "Window count, trim, and installation labor cost estimates." },
+  { icon: "🏠", title: "Flooring Estimator", desc: "Material and labor estimates for tile, hardwood, carpet, and vinyl flooring." },
+  { icon: "🧊", title: "HVAC Estimator", desc: "Heating and cooling system sizing and cost estimation." },
+  { icon: "🚧", title: "Fencing Estimator", desc: "Fencing material, post, and labor cost calculations." },
+  { icon: "🏗️", title: "General Contractor", desc: "Multi-trade project aggregation with automatic markup and margins." },
+];
+---
+<BaseLayout title="TradeQuote Pro — Free B2B Construction Quote Estimator" description="Free B2B construction quote estimator with 12 trade calculators. Generate professional estimates for roofing, siding, concrete, electrical, plumbing and more. No login required." jsonLd={jsonLd}>
+  <section class="hero">
+    <div class="container">
+      <span class="tag" style="margin-bottom:1rem">🚀 Free Tool</span>
+      <h1>TradeQuote Pro — <span style="color:#3b82f6">Construction Quote Estimator</span></h1>
+      <p>Generate accurate B2B construction quotes in seconds. 12 trade-specific calculators with automatic material pricing, labor rates, and markup calculations. No sign-up required. No data stored.</p>
+      <div class="btns">
+        <a href="https://play.google.com/store/apps/details?id=com.tradequotepro.app" class="btn btn-primary">Download on Google Play</a>
+        <a href="/tradequote/blog/" class="btn btn-outline">Read Estimating Guides</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" style="padding-bottom:3rem">
+    <h2 style="text-align:center;margin-bottom:2rem">12 Professional Calculators</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem">
+      {features.map(f => (
+        <div class="card">
+          <div style="display:flex;align-items:flex-start;gap:0.75rem">
+            <span style="font-size:1.5rem">{f.icon}</span>
+            <div>
+              <h3 style="margin:0 0 0.25rem;font-size:1rem">{f.title}</h3>
+              <p style="margin:0;font-size:0.85rem">{f.desc}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <h2 style="text-align:center;margin:3rem 0 1.5rem">Screenshots</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;text-align:center">
+      {['1-dashboard','2-calculator-detail','3-kanban-overview','4-wage-determination','5-compliance-calendar'].map(s => (
+        <div class="card" style="padding:0.5rem">
+          <img src={`/screenshots/tradequote/${s}.png`} alt={`TradeQuote Pro ${s}`} style="border-radius:0.5rem;width:100%;max-width:200px" />
+        </div>
+      ))}
+    </div>
+
+    <h2 style="text-align:center;margin:3rem 0 1.5rem">Key Features</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem">
+      <div class="card" style="text-align:center">
+        <div style="font-size:2rem;margin-bottom:0.5rem">📱</div>
+        <h3 style="margin-bottom:0.5rem">Android App + PWA</h3>
+        <p style="margin:0;font-size:0.9rem">Install as a native Android app or use directly in your browser. Works offline.</p>
+      </div>
+      <div class="card" style="text-align:center">
+        <div style="font-size:2rem;margin-bottom:0.5rem">📊</div>
+        <h3 style="margin-bottom:0.5rem">Professional PDF Quotes</h3>
+        <p style="margin:0;font-size:0.9rem">Export estimates as professional PDF documents ready to send to clients.</p>
+      </div>
+      <div class="card" style="text-align:center">
+        <div style="font-size:2rem;margin-bottom:0.5rem">🔒</div>
+        <h3 style="margin-bottom:0.5rem">100% Private</h3>
+        <p style="margin:0;font-size:0.9rem">All data stays on your device. No servers, no accounts, no data collection.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

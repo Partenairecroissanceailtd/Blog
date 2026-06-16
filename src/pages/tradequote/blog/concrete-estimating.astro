@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org", "@type": "Article",
+  "headline": "Concrete Estimating: How to Calculate Material & Labor Costs",
+  "description": "Master concrete estimating for slabs, footings, columns, and walls. Includes volume calculations, material pricing, and strategies for profitable bids.",
+  "datePublished": "2026-06-16",
+  "author": { "@type": "Organization", "name": "Partenaire Croissance" }
+};
+---
+<BaseLayout title="Concrete Estimating: How to Calculate Material & Labor Costs" description="Master concrete estimating for slabs, footings, columns, and walls. Includes volume calculations, material pricing, and strategies for profitable bids." type="article" publishedTime="2026-06-16" jsonLd={jsonLd}>
+  <article class="container prose">
+    <h1>Concrete Estimating: How to Calculate Material & Labor Costs</h1>
+    <p style="font-size:0.9rem;color:#64748b;margin-bottom:2rem">Published June 16, 2026</p>
+    <p>Concrete estimating requires precision. A cubic yard of concrete costs $130-$180 delivered, and overestimating by even 5 yards on a commercial slab adds $600-$900 to your bid — enough to lose the contract. Underestimating means paying for additional pours out of your profit. This guide shows you how to get concrete estimates right every time using <a href="/tradequote/">TradeQuote Pro's concrete calculator</a>.</p>
+
+    <h2>Volume Calculations for Common Concrete Elements</h2>
+    <ul>
+      <li><strong>Slabs</strong> — Length × Width × Thickness. A 50'×40'×6" slab requires 37 cubic yards.</li>
+      <li><strong>Footings</strong> — Length × Width × Depth. Continuous footings require linear calculations.</li>
+      <li><strong>Columns</strong> — π × r² × Height. Round columns use cylinder volume formula.</li>
+      <li><strong>Walls</strong> — Length × Height × Thickness. Include openings deduction.</li>
+    </ul>
+
+    <h2>Material Cost Breakdown</h2>
+    <p>Concrete material costs include: ready-mix concrete ($130-$180/yard), rebar ($0.60-$1.20/lf), wire mesh ($0.15-$0.30/sq ft), vapor barrier ($0.05-$0.10/sq ft), form materials ($1.50-$3.00/sq ft of contact area), and concrete accessories like anchors, dowels, and keyways.</p>
+
+    <h2>Labor and Equipment</h2>
+    <p>A concrete crew of 4-5 workers can place 30-50 cubic yards per day for flatwork, or 15-25 cubic yards per day for formed work. Concrete pump truck rental ($150-$250/hour) is often required for slabs and elevated decks. Finish labor includes floating, troweling, and curing compound application.</p>
+
+    <h2>Profitability Tips</h2>
+    <p>Use TradeQuote Pro's <a href="/tradequote/">concrete estimator</a> to automatically calculate material quantities, apply current pricing, add waste factors, and generate completed quotes. Save your rates for consistent bidding across projects.</p>
+
+    <div style="margin-top:3rem;padding:1.5rem;background:#1a2332;border-radius:0.75rem;text-align:center">
+      <h3 style="margin-top:0">Try TradeQuote Pro Free</h3>
+      <p style="margin-bottom:1rem">Includes a dedicated concrete estimator. Zero login. Works offline.</p>
+      <a href="/tradequote/" class="btn btn-primary">Get Started →</a>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org", "@type": "Article",
+  "headline": "Siding Installation Cost Calculator: A Contractor's Guide",
+  "description": "Calculate siding installation costs accurately. Includes material pricing, labor rates, waste factors, and profit margin calculations for vinyl, wood, fiber cement, and metal siding.",
+  "datePublished": "2026-06-16",
+  "author": { "@type": "Organization", "name": "Partenaire Croissance" }
+};
+---
+<BaseLayout title="Siding Installation Cost Calculator: A Contractor's Guide" description="Calculate siding installation costs accurately. Includes material pricing, labor rates, waste factors, and profit margin calculations." type="article" publishedTime="2026-06-16" jsonLd={jsonLd}>
+  <article class="container prose">
+    <h1>Siding Installation Cost Calculator: A Contractor's Guide</h1>
+    <p style="font-size:0.9rem;color:#64748b;margin-bottom:2rem">Published June 16, 2026</p>
+    <p>Siding installation is one of the most common B2B trade contracts in residential and light commercial construction. Accurately estimating siding costs requires understanding multiple material types, installation methods, and pricing variables. This guide covers everything you need to produce accurate siding estimates using TradeQuote Pro's <a href="/tradequote/">siding cost calculator</a>.</p>
+
+    <h2>Siding Material Types and Costs</h2>
+    <p>Each siding material has different material costs, installation requirements, and labor rates:</p>
+    <ul>
+      <li><strong>Vinyl Siding</strong> — $3.50-$8.00 per sq ft installed. Fastest installation, lowest material cost.</li>
+      <li><strong>Fiber Cement (HardiePlank)</strong> — $6.00-$12.00 per sq ft installed. Durable, requires specialized cutting tools.</li>
+      <li><strong>Wood Siding</strong> — $5.00-$13.00 per sq ft installed. Premium appearance, higher maintenance.</li>
+      <li><strong>Engineered Wood (LP SmartSide)</strong> — $4.50-$9.00 per sq ft installed. Good balance of cost and appearance.</li>
+      <li><strong>Metal Siding</strong> — $5.00-$11.00 per sq ft installed. Industrial appearance, very durable.</li>
+      <li><strong>Stucco / EIFS</strong> — $6.00-$14.00 per sq ft installed. Labor-intensive, multiple coats required.</li>
+    </ul>
+
+    <h2>How to Calculate Siding Quantities</h2>
+    <p>Calculate square footage by measuring the exterior wall area. Subtract openings (windows, doors) at their actual size. For gable ends, calculate the triangular area (base × height ÷ 2). Add 10-15% waste for standard installations, 15-20% for complex architecture with multiple gables and dormers.</p>
+    <p>Don't forget trim accessories: corner posts, J-channel, starter strips, and window/door trim typically add 15-25% to material costs.</p>
+
+    <h2>Labor Rate Considerations</h2>
+    <p>Crew production rates vary by material: vinyl siding crews typically install 250-400 sq ft per person per day, while fiber cement crews achieve 150-250 sq ft per person per day due to additional cutting and fastening requirements. Account for scaffolding costs on multi-story projects.</p>
+
+    <h2>Using TradeQuote Pro</h2>
+    <p>Enter your wall dimensions, select the siding type, and input your material and labor costs. The <a href="/tradequote/">siding calculator</a> handles all the math including waste factors, trim calculations, and automatic profit margin application.</p>
+
+    <div style="margin-top:3rem;padding:1.5rem;background:#1a2332;border-radius:0.75rem;text-align:center">
+      <h3 style="margin-top:0">Try TradeQuote Pro Free</h3>
+      <p style="margin-bottom:1rem">Includes a dedicated siding estimator. Works offline. No login required.</p>
+      <a href="/tradequote/" class="btn btn-primary">Get Started →</a>
+    </div>
+  </article>
+</BaseLayout>

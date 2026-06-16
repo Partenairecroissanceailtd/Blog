@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org", "@type": "Article",
+  "headline": "Commercial Bidding: How to Win More Construction Contracts",
+  "description": "Complete guide to commercial construction bidding. Learn markup strategies, competitive pricing, proposal best practices, and how to use estimating tools.",
+  "datePublished": "2026-06-16",
+  "author": { "@type": "Organization", "name": "Partenaire Croissance" }
+};
+---
+<BaseLayout title="Commercial Bidding: How to Win More Construction Contracts" description="Complete B2B construction bidding guide. Learn markup strategies, competitive pricing, proposal best practices, and how to use TradeQuote Pro." type="article" publishedTime="2026-06-16" jsonLd={jsonLd}>
+  <article class="container prose">
+    <h1>Commercial Bidding: How to Win More Construction Contracts</h1>
+    <p style="font-size:0.9rem;color:#64748b;margin-bottom:2rem">Published June 16, 2026</p>
+    <p>Winning commercial construction bids requires more than just the lowest price. B2B clients evaluate proposals based on price accuracy, scope clarity, company qualifications, and demonstrated expertise. This guide covers strategies to improve your win rate while maintaining healthy profit margins.</p>
+
+    <h2>The B2B Bidding Process</h2>
+    <p>Commercial construction bidding typically follows a structured process: scope review and site visit, material and labor quantity takeoff, subcontractor quotes, overhead and profit calculation, proposal preparation and submission, and negotiation and award.</p>
+
+    <h2>Markup Strategies for B2B Contracts</h2>
+    <p>Your markup strategy depends on market conditions, project complexity, and your competitive position. Standard approaches include: cost-plus pricing (direct costs + fixed percentage for overhead and profit), fixed price with contingency (lump sum including 5-10% contingency), and competitive bid pricing (market rate with 10-20% margin).</p>
+
+    <h2>Using TradeQuote Pro for Bidding</h2>
+    <p>TradeQuote Pro's <a href="/tradequote/">construction estimating tools</a> streamline the bidding process. Use the general contractor calculator to aggregate multi-trade estimates, apply consistent overhead and markup across all trades, and generate professional quotes with material, labor, and margin breakdowns.</p>
+
+    <h2>Proposal Best Practices</h2>
+    <p>Winning proposals include: clear scope of work with inclusions and exclusions, detailed cost breakdown by phase or trade, project schedule with milestones, payment terms and schedule, insurance and bonding information, and proposal validity period.</p>
+
+    <h2>Common Bidding Mistakes</h2>
+    <ul>
+      <li><strong>Bidding too low</strong> — Winning unprofitable work is worse than losing bids</li>
+      <li><strong>Incomplete scope review</strong> — Missing project requirements leads to change orders and disputes</li>
+      <li><strong>Ignoring risk</strong> — Every project has risks that should be priced into your margin</li>
+      <li><strong>Poor proposal presentation</strong> — Professional presentation signals professional execution</li>
+    </ul>
+
+    <div style="margin-top:3rem;padding:1.5rem;background:#1a2332;border-radius:0.75rem;text-align:center">
+      <h3 style="margin-top:0">Try TradeQuote Pro Free</h3>
+      <p style="margin-bottom:1rem">Professional estimating tools to help you win more bids. No login required.</p>
+      <a href="/tradequote/" class="btn btn-primary">Get Started →</a>
+    </div>
+  </article>
+</BaseLayout>
