@@ -38,3 +38,20 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      # Notify IndexNow API of the latest URLs
+      - name: Ping IndexNow
+        run: |
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "www.partenairecroissance.com",
+              "key": "your-indexnow-api-key",
+              "keyLocation": "https://www.partenairecroissance.com/indexnow-key.txt",
+              "urlList": [
+                "https://www.partenairecroissance.com/",
+                "https://www.partenairecroissance.com/blog/",
+                "https://www.partenairecroissance.com/sdr/",
+                "https://www.partenairecroissance.com/tradequote/"
+              ]
+            }'

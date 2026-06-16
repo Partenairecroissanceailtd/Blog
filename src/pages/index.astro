@@ -38,8 +38,33 @@ const categories = [
   { name: 'Compliance & Legal', icon: '⚖️', count: 5, apps: apps.filter(a => ['Compliance', 'Legal'].includes(a.tag)) },
   { name: 'Business Operations', icon: '📊', count: 9, apps: apps.filter(a => ['HR', 'Property', 'Nonprofit', 'Trade', 'Services', 'Tech', 'Agriculture', 'Hospitality'].includes(a.tag)) },
 ];
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Partenaire Croissance",
+  "url": "https://www.partenairecroissance.com",
+  "description": "21 free B2B software tools and AI-powered SDR lead enrichment for home-service businesses.",
+  "foundingDate": "2026",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "ayoub@partenairecroissance.com"
+  }
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Partenaire Croissance",
+  "url": "https://www.partenairecroissance.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.partenairecroissance.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
 ---
-<BaseLayout title="Partenaire Croissance — 21 Free B2B Software Tools" description="21 free professional B2B software tools for construction contractors, legal professionals, finance teams, and business owners. Zero-login calculators, compliance trackers, and estimating tools.">
+<BaseLayout title="Partenaire Croissance — Free B2B Tools & AI SDR Lead Enrichment" description="21 free B2B software tools for contractors, legal, finance & compliance. Plus AI-powered SDR lead enrichment for home-service businesses running Meta/Google Ads." jsonLd={[orgJsonLd, websiteJsonLd]}>
   <!-- Hero Section -->
   <section style="position:relative;overflow:hidden;padding:5rem 0 4rem;background:linear-gradient(135deg,#0a0f1a 0%,#0f1a2e 50%,#1a0f2e 100%)">
     <div style="position:absolute;top:-50%;right:-20%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,0.08),transparent 70%);pointer-events:none"></div>

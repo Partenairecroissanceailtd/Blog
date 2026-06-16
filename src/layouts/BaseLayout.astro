@@ -42,6 +42,20 @@ const defaultImage = '/icons/icon-512x512.png';
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+  <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+  <link rel="llms.txt" type="text/plain" href="/llms.txt" title="LLMs.txt" />
+  <link rel="alternate" type="application/rss+xml" title="Partenaire Croissance Blog" href="/rss.xml" />
+  
+  <!-- BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.partenairecroissance.com/" }
+    ]
+  }
+  </script>
   
   <style is:global>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
