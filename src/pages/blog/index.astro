@@ -2,6 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const posts = [
+  // Lead Gen / AI SDR articles
+  { title: 'Facebook Ads for Home-Service Businesses: The 2026 Playbook', path: '/blog/facebook-ads-home-services/', desc: 'How HVAC, roofing, landscaping and contractors can use Meta ads to generate qualified leads. Budget benchmarks, targeting and follow-up strategies.', date: '2026-06-16', tag: 'Meta Ads' },
+  { title: 'Google Ads for Plumbers: How to Dominate Local Search in 2026', path: '/blog/google-ads-for-plumbers/', desc: 'Complete guide to Google Ads for plumbing contractors. Keyword strategy, budget benchmarks, ad extensions, and the #1 PPC mistake to avoid.', date: '2026-06-16', tag: 'Google Ads' },
+  { title: 'Meta Ads for Electricians: A Complete Guide to Getting More Customers', path: '/blog/meta-ads-for-electricians/', desc: 'Step-by-step guide to profitable Meta/Facebook ads for electrical contractors. Targeting, budgeting, and landing page strategies that book jobs.', date: '2026-06-16', tag: 'Meta Ads' },
+  // Construction estimating guides
   { title: 'The Complete Guide to Construction Estimating for B2B Trades', path: '/tradequote/blog/construction-estimating-guide/', desc: 'Everything you need to know about B2B construction estimating — from material takeoffs to profit margins.', date: '2026-06-16', tag: 'Guide' },
   { title: 'Roofing Cost Estimator: How to Price Commercial Roofing Jobs', path: '/tradequote/blog/roofing-cost-estimator/', desc: 'Learn how to accurately estimate commercial roofing costs including materials, labor, overhead, and profit margin.', date: '2026-06-16', tag: 'Roofing' },
   { title: 'Siding Installation Cost Calculator: A Contractor\'s Guide', path: '/tradequote/blog/siding-installation-cost-calculator/', desc: 'Calculate siding installation costs accurately. Includes material pricing, labor rates, and waste factor calculations.', date: '2026-06-16', tag: 'Siding' },
@@ -16,11 +21,11 @@ const jsonLd = {
   "description": "Construction estimating guides, B2B bidding strategies, and business operations tips for contractors and trades."
 };
 ---
-<BaseLayout title="Blog — Construction Estimating & B2B Business Guides" description="Expert guides on construction estimating, commercial bidding, material pricing, and B2B business operations for contractors and trades." jsonLd={jsonLd}>
+<BaseLayout title="Guides — Construction Estimating & Home-Service Lead Generation" description="Expert guides on construction estimating, commercial bidding, and Meta/Google Ads for home-service businesses. Learn how tradies can generate more leads." jsonLd={jsonLd}>
   <section class="hero" style="padding-bottom:2rem">
     <div class="container">
-      <h1>Construction Estimating <span style="color:#3b82f6">Guides & Resources</span></h1>
-      <p>Expert knowledge to help contractors, estimators, and tradespeople win more bids and price jobs accurately.</p>
+      <h1>Expert Guides <span style="color:#3b82f6">for Trades & Contractors</span></h1>
+      <p>Construction estimating guides <span style="color:#64748b">+</span> paid ads playbooks for home-service businesses looking to scale.</p>
     </div>
   </section>
 
