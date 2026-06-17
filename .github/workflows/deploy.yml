@@ -46,8 +46,8 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{
               "host": "www.partenairecroissance.com",
-              "key": "your-indexnow-api-key",
-              "keyLocation": "https://www.partenairecroissance.com/indexnow-key.txt",
+              "key": "de6f2892a78944ff9a96c5964e3e689f",
+              "keyLocation": "https://www.partenairecroissance.com/de6f2892a78944ff9a96c5964e3e689f.txt",
               "urlList": [
                 "https://www.partenairecroissance.com/",
                 "https://www.partenairecroissance.com/blog/",
