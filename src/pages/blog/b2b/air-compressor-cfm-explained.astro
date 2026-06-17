@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CFM, PSI, and HP Explained: What Contractors Need to Know to Choose the Right Air Compressor",
+  "description": "Clear explanation of air compressor specs for contractors. What CFM, PSI, horsepower, and tank size really mean, how to calculate what your tools need, and why spec sheets often mislead.",
+  "datePublished": "2026-06-17"
+};
+---
+<BaseLayout title="CFM, PSI, and HP Explained: What Contractors Need to Know to Choose the Right Air Compressor" description="Clear explanation of air compressor specs for contractors. What CFM, PSI, horsepower, and tank size really mean, how to calculate what your tools need, and why spec sheets often mislead." jsonLd={jsonLd} type="article" publishedTime="2026-06-17">
+  <article class="container" style="max-width:750px;margin:0 auto;padding:3rem 1.5rem">
+    <div style="margin-bottom:2rem">
+      <span class="tag" style="background:#3b82f6;margin-bottom:0.75rem">Air Compressors</span>
+      <span class="tag" style="background:#22c55e;margin-left:0.5rem">Tech Guide</span>
+      <h1 style="font-size:2.25rem;margin-top:1rem;margin-bottom:0.5rem">CFM, PSI, and HP Explained: What Contractors Need to Know to Choose the Right Air Compressor</h1>
+      <div style="color:#64748b;font-size:0.9rem">June 17, 2026 · 12 min read</div>
+    </div>
+
+    <div class="prose">
+      <p>Walk into any tool store and every air compressor has three numbers on the box: CFM, PSI, and HP. The problem is that these numbers are rarely what they appear to be. Peak HP ratings inflate real motor output. CFM is measured at the pump, not at your tool. And PSI numbers may be achievable but not usable with your setup.</p>
+      <p>For professional contractors, understanding what these specs actually mean — and how the industry plays games with them — is the difference between buying a compressor that works and buying one that frustrates you every single day.</p>
+
+      <h2>CFM: Cubic Feet per Minute</h2>
+      <p>CFM measures the volume of air the compressor can deliver at a specific pressure. Think of it as the flow rate — how much air moves through the system per minute. Every air tool requires a minimum CFM to operate properly.</p>
+      <p>Here is the critical distinction most contractors miss: there are two different CFM ratings on every compressor spec sheet.</p>
+      <p><strong>Piston displacement CFM</strong> is the theoretical volume the pump moves based on bore, stroke, and RPM. It does not account for inefficiencies, heat, or back pressure. Manufacturers love this number because it's always higher than actual output.</p>
+      <p><strong>Actual CFM (or delivered CFM)</strong> is the real volume of air exiting the compressor at a given pressure. This is what your tool actually receives. The difference between displacement CFM and actual CFM is typically 20–35%. A compressor advertising 5.0 CFM displacement may deliver only 3.5 CFM at 90 PSI at the hose end.</p>
+      <p>Always look for CFM at 90 PSI — this is the standard measurement for pneumatic tools. Ignore "free air CFM" or "displacement CFM" numbers. If a spec sheet only lists displacement CFM, assume the real number is about 30% lower.</p>
+
+      <h3>CFM Requirements by Tool Type</h3>
+      <div style="background:#1a2332;border:1px solid #2a3a4e;border-radius:0.5rem;padding:1.25rem;margin:1.5rem 0">
+        <p><strong>Low CFM (under 1.0 at 90 PSI)</strong><br>
+        Brad nailers, pin nailers, staplers, air blow guns (intermittent). Any compressor can run these.</p>
+        <p><strong>Moderate CFM (1.0–4.0 at 90 PSI)</strong><br>
+        Framing nailers, roofing nailers, coil nailers, finish nailers (continuous). A quality wheeled portable in the 3.5–4.0 CFM range handles these comfortably.</p>
+        <p><strong>High CFM (4.0–10.0 at 90 PSI)</strong><br>
+        Random-orbit sanders, die grinders, 1/2-inch impact wrenches, cut-off tools. These require either a large portable unit (10+ gallons, 4.5+ CFM) or a two-stage stationary compressor.</p>
+        <p><strong>Very High CFM (10.0+ at 90 PSI)</strong><br>
+        HVLP spray guns, sandblasters, multiple tools simultaneously. This is exclusively two-stage stationary compressor territory. The <a href="https://www.amazon.com/dp/B005HPTQR6?tag=sciencesolved-20">Ingersoll Rand 2340L5-V 5 hp Type 30</a> delivers approximately 15 CFM at 90 PSI, making it capable of running a spray gun and sander simultaneously. <a href="https://www.amazon.com/dp/B005HPTQR6?tag=sciencesolved-20">Check current price on Amazon</a>.</p>
+      </div>
+
+      <h3>The 50% Headroom Rule</h3>
+      <p>Never buy a compressor whose CFM rating at 90 PSI exactly matches your tool's requirement. If your framing nailer needs 2.5 CFM, you want a compressor that delivers at least 3.8 CFM at 90 PSI. The reasons are:</p>
+      <ul>
+        <li>CFM drops as tools wear and seals age</li>
+        <li>Hose length and diameter reduce delivered CFM (50 feet of 3/8-inch hose can drop CFM by 15%)</li>
+        <li>Fittings, quick connects, and filters each add restriction</li>
+        <li>High ambient temperature reduces pump efficiency</li>
+</ul>
+      <p>Headroom also means your compressor cycles less frequently, runs cooler, and lasts longer. A compressor running at 80% of its maximum CFM output will outlast one running at 98% by a factor of 3–5.</p>
+
+      <h2>PSI: Pounds per Square Inch</h2>
+      <p>PSI measures the pressure of the air in the system — how much force is behind each cubic foot of air. Most pneumatic tools operate at 90 PSI. Some tools (like HVLP spray guns) operate at 40 PSI, and some (like impact wrenches) perform better at higher pressures up to 120 PSI.</p>
+      <p><strong>Most residential compressors max out at 125–150 PSI.</strong> This is sufficient for any nailer, stapler, blow gun, or sander on the market.</p>
+      <p><strong>Industrial two-stage compressors like the Ingersoll Rand 2340L5-V max out at 175 PSI.</strong> The higher pressure serves two purposes:</p>
+      <ul>
+        <li><strong>More stored energy:</strong> A 60-gallon tank at 175 PSI holds significantly more usable air than the same tank at 125 PSI. Higher pressure means longer tool run time before the compressor cycles on.</li>
+        <li><strong>Distribution headroom:</strong> When you pipe air through a shop with multiple drops, pressure loss through the pipes reduces the pressure at each drop. Starting at 175 PSI means you can pipe a long run and still have 90+ PSI at the farthest work station.</li>
+      </ul>
+      <p>For a portable jobsite compressor running a single nailer through a 25-foot hose, standard 125–150 PSI is perfectly adequate. You don't need 175 PSI. But for a shop with hard-piped air distribution, the higher starting pressure gives you design flexibility.</p>
+
+      <h2>HP: Horsepower</h2>
+      <p>Horsepower is the most manipulated number in the air compressor industry. The Federal Trade Commission has guidelines on HP labeling, but many manufacturers, especially at the consumer level, ignore them or use creative workarounds.</p>
+      <p><strong>Real HP vs Peak HP vs Developed HP</strong></p>
+      <p>A genuine 1 HP motor draws approximately 746 watts of electrical power. At 120 volts, that's about 6.2 amps. A 5 HP motor draws roughly 3,730 watts — which requires about 31 amps at 120 volts or 15.5 amps at 240 volts. Most 120-volt household circuits are 15 or 20 amps.</p>
+      <p>This means any compressor claiming 5 HP that plugs into a standard 120-volt outlet is lying. The math doesn't work. True 5 HP compressors require a 230-volt circuit, just like an electric range or clothes dryer.</p>
+      <p><strong>Practical HP ranges for contractors:</strong></p>
+      <ul>
+        <li><strong>0.5–1.5 HP (120V, 6–12 amps):</strong> Pancake and hot dog compressors. Enough for trim nailers, brad nailers, and light stapling.</li>
+        <li><strong>1.5–2.0 HP (120V, 12–15 amps):</strong> Most wheeled portable compressors. Enough for a single framing nailer or roofing nailer.</li>
+        <li><strong>3.0–5.0 HP (230V, 15–25 amps):</strong> Two-stage stationary compressors. The Ingersoll Rand 2340L5-V uses a true 5 HP, 230-volt motor drawing about 20 amps — a genuine industrial motor driving a genuine two-stage pump.</li>
+      </ul>
+      <p>Ignore HP numbers entirely when comparing compressors. Focus on CFM at 90 PSI and tank size. HP matters only as a sanity check — if the HP number is impossibly high for the electrical plug, walk away.</p>
+
+      <h2>Tank Size and the Relationship with CFM</h2>
+      <p>Tank size determines how much stored air you have to work with before the compressor pump cycles on. It does not increase CFM — it increases run time between cycles.</p>
+      <p>Here's the relationship in practical terms:</p>
+      <ul>
+        <li><strong>Small tank (1–6 gallons) + low CFM:</strong> The compressor cycles frequently. Fine for intermittent use (nail guns that fire every few seconds). The tank refills during pauses in work.</li>
+        <li><strong>Large tank (60+ gallons) + high CFM:</strong> The compressor runs for a long time before cycling, and when it does cycle, it runs briefly before refilling. Ideal for continuous-use tools like sanders and spray guns.</li>
+        <li><strong>Large tank + low CFM:</strong> A mismatch. The tank gives you a burst of work time, but once it's depleted, the low-CFM pump takes a long time to refill it. You get long work cycles followed by long wait times.</li>
+      </ul>
+      <p>The ideal combination is a tank large enough to smooth out your tool's demand pattern and a CFM rating high enough to refill it faster than you drain it. For a framing crew running one nailer, a 10-gallon tank with 3.5 CFM works well. For a shop running a sander continuously, a 60-gallon tank with 15+ CFM is the minimum.</p>
+
+      <h2>Duty Cycle: The Hidden Spec</h2>
+      <p>Duty cycle is the percentage of time a compressor pump is designed to run in a 10-minute window without overheating. A 50% duty cycle means 5 minutes of pumping, 5 minutes of rest. A 100% continuous duty means the pump can run indefinitely.</p>
+      <p>Most portable compressors have a 25–50% duty cycle. They are designed for intermittent use — shoot a dozen nails, pause, shoot more. If you run them continuously for sanding or grinding, you will overheat the pump and trigger the thermal overload switch.</p>
+      <p>Two-stage industrial compressors like the Ingersoll Rand 2340L5-V have a 100% continuous duty cycle. They are designed to run all day, every day, in a production environment. The cast-iron pump dissipates heat more efficiently, and the lower operating RPM (compared to high-speed oil-free pumps) reduces thermal stress.</p>
+      <p>If you need continuous air output for sanding, spraying, or grinding, a continuous-duty compressor is not a luxury — it's a requirement. </p>
+
+      <h2>Real-World Scenario: Sizing a Compressor for a Cabinet Shop</h2>
+      <p>Let's work through a real example. A cabinet shop runs:</p>
+      <ul>
+        <li>One random-orbit sander (5.0 CFM at 90 PSI, continuous)</li>
+        <li>Occasional pin nailer (0.3 CFM, intermittent)</li>
+        <li>Occasional blow gun (1.0 CFM, intermittent)</li>
+        <li>Future HVLP spray gun (8.0 CFM at 40 PSI)</li>
+      </ul>
+      <p>The sander alone requires 5.0 CFM continuous. Add 50% headroom: 7.5 CFM. The spray gun at 40 PSI requires 8.0 CFM. The compressor must deliver at least 8.0 CFM at the tool's operating pressure.</p>
+      <p>This immediately rules out every 120-volt portable compressor. Even a high-end wheeled portable at 4.0 CFM is less than half of what's needed. The only realistic choice is a two-stage 60-gallon unit like the Ingersoll Rand 2340L5-V.</p>
+      <p>With 15+ CFM at 90 PSI and a 60-gallon tank, it handles the sander continuously with plenty of reserve for the blow gun and nailer. The spray gun runs comfortably off the same system. And the 175 PSI max pressure provides headroom for long pipe runs to drops on the other side of the shop.</p>
+
+      <h2>Common Mistakes Contractors Make</h2>
+      <p><strong>Mistake 1: Buying by horsepower.</strong> You end up with a "6 HP" unit that plugs into a 120V outlet and can't run a framing nailer. Shop by CFM at 90 PSI, not HP.</p>
+      <p><strong>Mistake 2: Ignoring duty cycle.</strong> You buy a 50% duty cycle portable for shop sanding and trip the thermal overload every 30 minutes. Check the duty cycle before buying.</p>
+      <p><strong>Mistake 3: Undersizing the tank.</strong> You match the CFM perfectly but buy a 4-gallon tank. The compressor cycles on and off every 20 seconds. You need enough tank volume to store a meaningful reserve.</p>
+      <p><strong>Mistake 4: Forgetting 230V requirements.</strong> You buy a two-stage compressor without checking power availability in your shop. Two-stage compressors require 230V. Get an electrician to run a dedicated circuit before the compressor arrives.</p>
+      <p><strong>Mistake 5: Not accounting for future tools.</strong> You buy a compressor for today's tools only. Six months later you add a spray gun and your compressor can't keep up. Buy for the tools you plan to add, not just the tools you own now.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>CFM, PSI, HP, tank size, and duty cycle are not just spec sheet numbers — they are the language of air compressor capability. Once you understand how they interact, you can look at any compressor and know instantly whether it fits your work.</p>
+      <p>For professional contractors, the decision framework is simple: identify the highest-CFM tool you run (or plan to run), add 50% headroom, verify the CFM number at 90 PSI, confirm continuous duty cycle if you run continuous tools, and match tank size to your work pattern. Ignore HP. Verify electrical requirements. And buy from a brand with a track record of industrial reliability.</p>
+      <p>Getting the specs right the first time means your compressor stops being something you think about and becomes something that just works — every day, every job, for years.</p>
+
+      <div style="border-top:1px solid #2a3a4e;margin-top:2rem;padding-top:1rem;font-size:0.85rem;color:#64748b">
+        <p><em>We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites. As an Amazon Associate we earn from qualifying purchases. All prices and ratings are subject to change — always check current pricing on Amazon before making a purchase.</em></p>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
