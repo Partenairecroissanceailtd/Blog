@@ -11,7 +11,7 @@ export interface Props {
 
 const { title, description, canonical, image, type = 'website', publishedTime, jsonLd } = Astro.props;
 const siteUrl = 'https://www.partenairecroissance.com';
-const defaultImage = '/icons/icon-512x512.png';
+const defaultImage = '/images/og-default.png';
 
 // Auto-enhance jsonLd with NewsArticle defaults for Discover eligibility
 const enhancedJsonLd = jsonLd ? {
