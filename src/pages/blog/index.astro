@@ -1,115 +1,47 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const posts = [
-  // Lead Capture & App Guides (June 18)
-  { title: 'How Tradies Lose 72% of Phone Leads to Voicemail (And Fix It)', path: '/blog/voicemail-hangup-cost-tradies/', desc: '72% of homeowners hang up on voicemail. That means 7 out of 10 Google Ads leads vanish. Learn how 24/7 call recovery captures them.', date: '2026-06-18', tag: 'Call Recovery' },
-  { title: 'FleetSafe Pro: Maintenance Tracking for Contractor Fleets', path: '/blog/fleetsafe-pro-fleet-tracking-guide/', desc: 'Set up FleetSafe Pro in 30 minutes. Track vehicle maintenance, DOT inspections, fuel costs, and keep your fleet on the road.', date: '2026-06-18', tag: 'FleetSafe Pro' },
-  // B2B Contractor Gear Guides (June 17)
-  { title: 'Complete Tool Box Buying Guide for Contractors & Tradespeople', path: '/blog/b2b/tool-box-buying-guide/', desc: 'Learn how to choose the right tool box for your contracting business. From truck boxes to modular storage, covering every format tradespeople need.', date: '2026-06-17', tag: 'Tool Storage' },
-  { title: '10 Best Tool Boxes Compared — 2026 Guide for Contractors', path: '/blog/b2b/tool-box-comparison/', desc: 'Side-by-side comparison of the top tool boxes and storage systems for contractors. Ratings, features, and pro recommendations.', date: '2026-06-17', tag: 'Tool Storage' },
-  { title: 'Best Budget Tool Boxes for Contractors', path: '/blog/b2b/tool-box-budget/', desc: 'Affordable tool storage that doesn\'t sacrifice quality. Budget-friendly picks for contractors starting out or expanding their kit.', date: '2026-06-17', tag: 'Tool Storage' },
-  { title: 'Modular vs Chest vs Tool Tote: Which Storage System?', path: '/blog/b2b/tool-box-modular-vs-chest/', desc: 'Tool chests, modular stackables, and totes each have strengths. Match the system to your trade and daily workflow.', date: '2026-06-17', tag: 'Tool Storage' },
-  { title: 'Tool Box Organization Guide for Maximum Efficiency', path: '/blog/b2b/tool-box-organization/', desc: 'How to organize your tool storage system to save time, prevent theft, and extend tool life on active job sites.', date: '2026-06-17', tag: 'Tool Storage' },
-  { title: 'Complete Work Boot Buying Guide for Construction Trades', path: '/blog/b2b/work-boots-buying-guide/', desc: 'Steel toe vs composite vs soft toe — pick the right work boot for your trade. Safety certifications, waterproofing, and fit explained.', date: '2026-06-17', tag: 'Work Boots' },
-  { title: '10 Best Work Boots for Construction Compared — 2026', path: '/blog/b2b/work-boots-comparison/', desc: 'Eight top-rated work boots compared by safety features, durability, comfort, and value. Trade-specific recommendations included.', date: '2026-06-17', tag: 'Work Boots' },
-  { title: 'Best Budget Work Boots Under $100 — Tested for Trades', path: '/blog/b2b/work-boots-budget/', desc: 'You don\'t need to spend a fortune for job site safety. These budget work boots deliver protection without breaking the bank.', date: '2026-06-17', tag: 'Work Boots' },
-  { title: 'Steel Toe vs Composite Toe vs Alloy: Which Is Safest?', path: '/blog/b2b/work-boots-steel-vs-composite/', desc: 'Every safety toe type has trade-offs. Learn which one matches your job site hazards, climate, and comfort needs.', date: '2026-06-17', tag: 'Work Boots' },
-  { title: 'How to Make Your Work Boots Last 3x Longer', path: '/blog/b2b/work-boots-maintenance/', desc: 'Daily, weekly, and monthly maintenance routines that double the lifespan of your work boots. Plus when to repair vs replace.', date: '2026-06-17', tag: 'Work Boots' },
-  { title: 'Laser Measure Buying Guide for Contractors', path: '/blog/b2b/laser-measure-buying-guide/', desc: 'Complete guide to choosing a laser measuring tool. Range, accuracy, red vs green laser, and top recommendations for every trade.', date: '2026-06-17', tag: 'Laser Measures' },
-  { title: '10 Best Laser Measures Compared — 2026 Contractor Reviews', path: '/blog/b2b/laser-measure-comparison/', desc: 'Top laser distance measurers compared side by side. From budget picks to Bluetooth-enabled pro models.', date: '2026-06-17', tag: 'Laser Measures' },
-  { title: 'Best Budget Laser Measuring Tools Under $80', path: '/blog/b2b/laser-measure-budget/', desc: 'Accurate laser measures don\'t have to cost a fortune. These budget picks deliver pro-level precision under $80.', date: '2026-06-17', tag: 'Laser Measures' },
-  { title: 'Laser Measure vs Tape Measure: When to Use Each', path: '/blog/b2b/laser-measure-vs-tape/', desc: 'Both tools have their place on a job site. Learn when a laser saves time and when a tape is still the right call.', date: '2026-06-17', tag: 'Laser Measures' },
-  { title: 'How to Get the Most Accurate Measurements with a Laser', path: '/blog/b2b/laser-measure-accuracy/', desc: 'Pro tips for ±1/16" accuracy every time. Surface conditions, environmental factors, and measurement techniques that matter.', date: '2026-06-17', tag: 'Laser Measures' },
-  { title: 'Portable Power Station Buying Guide for Contractors', path: '/blog/b2b/portable-power-station-guide/', desc: 'How to choose a portable power station for your construction job site. Battery type, capacity, solar readiness, and real-world use cases.', date: '2026-06-17', tag: 'Power Stations' },
-  { title: '8 Best Portable Power Stations Compared for Job Sites', path: '/blog/b2b/portable-power-station-comparison/', desc: 'Top power stations rated by output, runtime, durability, and value. Find the right capacity for your tools and crew.', date: '2026-06-17', tag: 'Power Stations' },
-  { title: 'Best Budget Power Stations Under $500 for Contractors', path: '/blog/b2b/portable-power-station-budget/', desc: 'Silent, emission-free job site power without the premium price tag. These portable power stations deliver real value under $500.', date: '2026-06-17', tag: 'Power Stations' },
-  { title: 'Power Station vs Gas Generator for Construction', path: '/blog/b2b/portable-power-station-vs-generator/', desc: 'Battery power stations vs traditional gas generators. Total cost of ownership, noise, maintenance, and when each makes sense.', date: '2026-06-17', tag: 'Power Stations' },
-  { title: 'Solar-Ready Power Stations for Remote Job Sites', path: '/blog/b2b/portable-power-station-solar/', desc: 'Keep your crew powered off-grid with solar-compatible power stations. Panel sizing, charge times, and real contractor setups.', date: '2026-06-17', tag: 'Power Stations' },
-  { title: 'Complete Job Site Lighting Guide for Contractors', path: '/blog/b2b/job-site-lighting-guide/', desc: 'Everything contractors need to know about job site lighting. Lumens, IP ratings, beam angles, power sources, and setup strategies.', date: '2026-06-17', tag: 'Job Site Lighting' },
-  { title: '8 Best Job Site Lights Compared — Work Lights for Contractors', path: '/blog/b2b/job-site-lighting-comparison/', desc: 'Top-rated job site lights compared: tripod lights, string lights, battery-powered, and portable floodlights for every trade.', date: '2026-06-17', tag: 'Job Site Lighting' },
-  { title: 'Best Budget Job Site Lights Under $100', path: '/blog/b2b/job-site-lighting-budget/', desc: 'Quality job site lighting doesn\'t have to cost a fortune. These budget work lights deliver reliable illumination under $100.', date: '2026-06-17', tag: 'Job Site Lighting' },
-  { title: 'LED vs Halogen vs Battery Job Site Lights Compared', path: '/blog/b2b/job-site-lighting-led-vs-halogen/', desc: 'LED, halogen, and battery-powered lights each have strengths. Compare brightness, runtime, durability, and total cost by trade.', date: '2026-06-17', tag: 'Job Site Lighting' },
-  { title: 'How Job Site Lighting Improves Construction Safety', path: '/blog/b2b/job-site-lighting-safety/', desc: 'OSHA requirements, accident prevention, fire hazards, and the ROI of proper lighting on active construction sites.', date: '2026-06-17', tag: 'Job Site Lighting' },
-  { title: 'Shop Vac Buying Guide: Choosing the Right Wet/Dry Vacuum', path: '/blog/b2b/shop-vac-buying-guide/', desc: 'Complete guide to choosing a wet/dry vacuum for your trade business. Horsepower, tank size, filtration, and accessories covered.', date: '2026-06-17', tag: 'Shop Vacs' },
-  { title: '8 Best Wet/Dry Shop Vacs Compared for Job Sites', path: '/blog/b2b/shop-vac-comparison/', desc: 'Top-rated shop vacs compared by suction power, capacity, durability, and value. Find the right vacuum for cleanup and dust control.', date: '2026-06-17', tag: 'Shop Vacs' },
-  { title: 'Best Budget Shop Vacs That Don\'t Sacrifice Performance', path: '/blog/b2b/shop-vac-budget/', desc: 'Affordable wet/dry vacs that deliver pro-level suction. Budget picks for contractors who need reliable cleanup without overspending.', date: '2026-06-17', tag: 'Shop Vacs' },
-  { title: 'What Size Shop Vac Do You Need? Tank Size Guide by Trade', path: '/blog/b2b/shop-vac-which-size/', desc: 'Tank size matters more than horsepower for most trades. Match your vac capacity to your trade, from 6-gallon to 16-gallon models.', date: '2026-06-17', tag: 'Shop Vacs' },
-  { title: 'How to Maintain Your Shop Vac for Maximum Suction', path: '/blog/b2b/shop-vac-maintenance/', desc: 'Daily, weekly, and monthly maintenance routines that keep your wet/dry vac performing like new. Filter care, hose storage, and troubleshooting.', date: '2026-06-17', tag: 'Shop Vacs' },
-  // High-Ticket Contractor Gear (June 17)
-  { title: 'Truck Toolbox Buying Guide: Pro-Grade Storage for Contractor Trucks', path: '/blog/b2b/truck-toolbox-buying-guide/', desc: 'Crossover vs saddle vs underbody truck boxes. Materials, locks, mounting, and ROI for trade professionals who work from a pickup.', date: '2026-06-17', tag: 'Truck Toolboxes' },
-  { title: '8 Best Truck Toolboxes Compared for Contractors', path: '/blog/b2b/truck-toolbox-comparison/', desc: 'UWS, Weather Guard, and Garvee truck boxes rated by security, durability, and value. Aluminum vs steel compared.', date: '2026-06-17', tag: 'Truck Toolboxes' },
-  { title: 'Crossbed vs Saddle vs Underbody Truck Toolbox: Which Is Right?', path: '/blog/b2b/truck-toolbox-crossbed-vs-saddle/', desc: 'Every truck box format has tradeoffs. Match yours to your trade, truck bed setup, and daily tool access needs.', date: '2026-06-17', tag: 'Truck Toolboxes' },
-  { title: 'How to Secure Tools in a Truck: Locks, Boxes & Anti-Theft', path: '/blog/b2b/truck-toolbox-security/', desc: 'Six-layer security strategy for contractor trucks. From padlocks to bed covers to GPS trackers.', date: '2026-06-17', tag: 'Truck Toolboxes' },
-  { title: 'Aluminum vs Steel vs Poly Truck Toolboxes: Pros & Cons', path: '/blog/b2b/truck-toolbox-aluminum-vs-steel/', desc: 'Weight, corrosion resistance, theft protection, and lifespan differences between truck box materials.', date: '2026-06-17', tag: 'Truck Toolboxes' },
-  { title: 'Safety Harness Buying Guide: Fall Protection for Contractors', path: '/blog/b2b/safety-harness-buying-guide/', desc: 'Complete guide to OSHA-compliant fall protection harnesses. Full-body, positioning, and suspension types explained for every trade.', date: '2026-06-17', tag: 'Safety Harnesses' },
-  { title: '8 Best Safety Harnesses Compared for Construction', path: '/blog/b2b/safety-harness-comparison/', desc: '3M DBI-Sala, Protecta, and TRSMIMA harnesses compared by comfort, certification, and job-site durability.', date: '2026-06-17', tag: 'Safety Harnesses' },
-  { title: 'Safety Harness Types: Full-Body vs Positioning vs Suspension', path: '/blog/b2b/safety-harness-types/', desc: 'Every harness type serves a different job. Roofers, ironworkers, scaffolders — match the harness to the hazard.', date: '2026-06-17', tag: 'Safety Harnesses' },
-  { title: 'OSHA Fall Protection Requirements & Harness Compliance Guide', path: '/blog/b2b/safety-harness-osha-compliance/', desc: 'OSHA 1926.501, ANSI Z359.11, and harness selection for construction sites. What every contractor must know.', date: '2026-06-17', tag: 'Safety Harnesses' },
-  { title: 'How to Inspect & Maintain a Fall Protection Harness', path: '/blog/b2b/safety-harness-inspection/', desc: 'Pre-use, monthly, and annual inspection checklist for safety harnesses. When to retire a harness for good.', date: '2026-06-17', tag: 'Safety Harnesses' },
-  { title: 'Multimeter Buying Guide for Professional Electricians', path: '/blog/b2b/multimeter-buying-guide/', desc: 'CAT ratings, true RMS, counts and accuracy explained. How to choose the right multimeter for residential, commercial, or industrial work.', date: '2026-06-17', tag: 'Multimeters' },
-  { title: '8 Best Multimeters Compared: Fluke, Klein, Milwaukee', path: '/blog/b2b/multimeter-comparison/', desc: 'Top electrical test meters compared by safety rating, accuracy, durability, and ecosystem. Pro recommendations included.', date: '2026-06-17', tag: 'Multimeters' },
-  { title: 'Analog vs Digital vs Clamp Meters: Which for Your Work?', path: '/blog/b2b/multimeter-analog-vs-digital/', desc: 'Every meter type has strengths. Learn when analog is better, when digital wins, and why every electrician needs a clamp meter.', date: '2026-06-17', tag: 'Multimeters' },
-  { title: 'Multimeter CAT Ratings Explained: Safety Guide for Electricians', path: '/blog/b2b/multimeter-safety-ratings/', desc: 'CAT I-IV safety ratings decoded. Why using the wrong category meter can be deadly on commercial electrical systems.', date: '2026-06-17', tag: 'Multimeters' },
-  { title: 'Fluke vs Klein vs Milwaukee: Pro Electrician Meter Shootout', path: '/blog/b2b/multimeter-fluke-vs-klein/', desc: 'Brand comparison of the three dominant pro multimeter manufacturers. Safety, accuracy, features, and ecosystem compared head-to-head.', date: '2026-06-17', tag: 'Multimeters' },
-  { title: 'Ladder Buying Guide for Professional Contractors', path: '/blog/b2b/ladder-buying-guide/', desc: 'Duty ratings, materials, and ladder types for trade professionals. Type IA 300lb minimum guide for construction, electrical, and HVAC.', date: '2026-06-17', tag: 'Ladders' },
-  { title: '8 Best Ladders Compared for Contractors: Werner, Louisville & More', path: '/blog/b2b/ladder-comparison/', desc: 'Top-rated ladders compared by weight rating, material, height, and trade application. Side-by-side specs and recommendations.', date: '2026-06-17', tag: 'Ladders' },
-  { title: 'Step vs Extension vs Platform vs Telescoping Ladders: Which?', path: '/blog/b2b/ladder-types/', desc: 'Every ladder format serves a different job site need. Match the type to your trade, from step ladders to extension to multi-position.', date: '2026-06-17', tag: 'Ladders' },
-  { title: 'OSHA Ladder Safety: Proper Setup, Weight Ratings & Inspection', path: '/blog/b2b/ladder-safety/', desc: 'OSHA 1926.1053 Subpart X compliance guide. 4:1 angle rule, duty ratings, inspection checklist, and fall prevention for contractors.', date: '2026-06-17', tag: 'Ladders' },
-  { title: 'Fiberglass vs Aluminum Ladders: Safety, Weight & Cost', path: '/blog/b2b/ladder-fiberglass-vs-aluminum/', desc: 'Material comparison for professional ladders. Electrical safety, weight considerations, lifespan, and trade-specific guidance.', date: '2026-06-17', tag: 'Ladders' },
-  { title: 'Air Compressor Buying Guide for Contractors & Trades', path: '/blog/b2b/air-compressor-buying-guide/', desc: 'CFM, tank size, HP, and duty cycle explained. How to choose the right compressor for framing, roofing, auto body, and general contracting.', date: '2026-06-17', tag: 'Air Compressors' },
-  { title: 'Best Air Compressors Compared: Ingersoll Rand, DEWALT & More', path: '/blog/b2b/air-compressor-comparison/', desc: 'Single-stage vs two-stage compressors compared. Ingersoll Rand 5hp, DEWALT kits, and pro-grade options rated for shop and job site.', date: '2026-06-17', tag: 'Air Compressors' },
-  { title: 'Single-Stage vs Two-Stage vs Portable Air Compressors', path: '/blog/b2b/air-compressor-types/', desc: 'Compressor type guide for trade professionals. Each type matched to framing, roofing, cabinetry, and automotive work.', date: '2026-06-17', tag: 'Air Compressors' },
-  { title: 'CFM, PSI & HP Explained: Choosing the Right Air Compressor', path: '/blog/b2b/air-compressor-cfm-explained/', desc: 'What contractors need to know about air compressor specs. Real-world CFM requirements for nail guns, impacts, sprayers, and sanders.', date: '2026-06-17', tag: 'Air Compressors' },
-  { title: 'Must-Have Air Compressor Accessories for Job Sites', path: '/blog/b2b/air-compressor-accessories/', desc: 'Hoses, fittings, blow guns, and kits every contractor needs. PVC vs rubber vs hybrid hose, quick connects, and pressure gauges.', date: '2026-06-17', tag: 'Air Compressors' },
-  // High-Ticket Power Washing Gear (June 17)
-  { title: 'Gas Pressure Washer Buying Guide for Contractors', path: '/blog/b2b/pressure-washer-buying-guide/', desc: 'PSI, GPM, engine type, and pump quality explained. How to choose a commercial-grade gas pressure washer for your contracting business.', date: '2026-06-17', tag: 'Pressure Washers' },
-  { title: '8 Best Gas Pressure Washers Compared: Simpson, Professional & More', path: '/blog/b2b/pressure-washer-comparison/', desc: 'Top commercial pressure washers compared by PSI, GPM, engine, and durability. Simpson 4400, Professional 4200, VEVOR, and more.', date: '2026-06-17', tag: 'Pressure Washers' },
-  { title: 'Gas vs Electric Pressure Washers for Contractors', path: '/blog/b2b/pressure-washer-gas-vs-electric/', desc: 'Cleaning power, job site logistics, total cost of ownership, and fleet strategy for gas vs electric pressure washers.', date: '2026-06-17', tag: 'Pressure Washers' },
-  { title: 'PSI vs GPM Explained: Choosing the Right Pressure Washer', path: '/blog/b2b/pressure-washer-psi-vs-gpm/', desc: 'Cleaning units, surface cleaner sizing, and nozzle selection. What contractors need to know about pressure washer specs.', date: '2026-06-17', tag: 'Pressure Washers' },
-  { title: 'Commercial vs Residential Pressure Washers: Is the Upgrade Worth It?', path: '/blog/b2b/pressure-washer-commercial-vs-residential/', desc: 'Cost-per-hour analysis, revenue impact, and 3-year TCO comparison between residential and commercial-grade pressure washers.', date: '2026-06-17', tag: 'Pressure Washers' },
-  // New posts (June 17)
-  { title: 'The Hidden Cost of Missed Calls on Google Ads for Tradies', path: '/blog/missed-calls-costing-ad-budget/', desc: 'Every missed call from Google Ads is $25–600 wasted. Learn how call recovery captures 100% of leads and books them into your calendar.', date: '2026-06-17', tag: 'Call Recovery' },
-  { title: 'TradeQuote Pro: How Contractors Send Accurate Estimates in Minutes', path: '/blog/tradequote-pro-estimating-guide/', desc: 'Step-by-step guide to sending construction estimates with TradeQuote Pro. Custom templates, material pricing, and instant client delivery.', date: '2026-06-17', tag: 'TradeQuote Pro' },
-  // Lead Gen / Ad articles for tradies
-  { title: 'Facebook Ads for Home-Service Businesses: The 2026 Playbook', path: '/blog/facebook-ads-home-services/', desc: 'How HVAC, roofing, landscaping and contractors can use Meta ads — and why missed calls cost 72% of their leads.', date: '2026-06-16', tag: 'Meta Ads' },
-  { title: 'Google Ads for Plumbers: How to Dominate Local Search in 2026', path: '/blog/google-ads-for-plumbers/', desc: 'Complete PPC guide for plumbers — keyword strategy, budget benchmarks, and how a call recovery system can capture lost voicemail leads.', date: '2026-06-16', tag: 'Google Ads' },
-  { title: 'Meta Ads for Electricians: A Complete Guide to Getting More Customers', path: '/blog/meta-ads-for-electricians/', desc: 'Profitable Facebook ads for electrical contractors — targeting, budgeting, and the #1 missed call problem that kills ROI.', date: '2026-06-16', tag: 'Meta Ads' },
-  // Construction estimating guides
-  { title: 'The Complete Guide to Construction Estimating for B2B Trades', path: '/tradequote/blog/construction-estimating-guide/', desc: 'Everything you need to know about B2B construction estimating — from material takeoffs to profit margins.', date: '2026-06-16', tag: 'Guide' },
-  { title: 'Roofing Cost Estimator: How to Price Commercial Roofing Jobs', path: '/tradequote/blog/roofing-cost-estimator/', desc: 'Learn how to accurately estimate commercial roofing costs including materials, labor, overhead, and profit margin.', date: '2026-06-16', tag: 'Roofing' },
-  { title: 'Siding Installation Cost Calculator: A Contractor\'s Guide', path: '/tradequote/blog/siding-installation-cost-calculator/', desc: 'Calculate siding installation costs accurately. Includes material pricing, labor rates, and waste factor calculations.', date: '2026-06-16', tag: 'Siding' },
-  { title: 'Concrete Estimating: How to Calculate Material & Labor Costs', path: '/tradequote/blog/concrete-estimating/', desc: 'Master concrete estimating for slabs, footings, columns, and walls. Includes volume calculations and pricing strategies.', date: '2026-06-16', tag: 'Concrete' },
-  { title: 'Commercial Bidding: How to Win More Construction Contracts', path: '/tradequote/blog/commercial-bidding/', desc: 'A complete guide to commercial construction bidding. Learn markup strategies, competitive pricing, and proposal best practices.', date: '2026-06-16', tag: 'Bidding' },
+const postList = [
+  {
+    title: 'Best Framing Tool Belt for Contractors (2026)',
+    description: 'Review and compare top-rated tool belts for framing carpenters: leather and nylon models from OX, DEWALT, and WELKINLAND.',
+    publishedDate: '2026-06-18',
+    slug: '/b2b/framing-tool-belt-guide',
+  },
+  {
+    title: 'The Best 7-1/4" Circular Saws for Professional Framers (2026)',
+    description: 'Professional 7-1/4 inch circular saw reviews for framers: Makita, DEWALT, Skil, and more. Ergonomic design, magnesium footplate, and brushless motors.',
+    publishedDate: '2026-06-18',
+    slug: '/b2b/circular-saw-for-framing-guide',
+  },
 ];
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Partenaire Croissance Blog",
-  "description": "Contractor gear guides, construction estimating, B2B bidding strategies, and business operations tips for trades. Tool reviews, work boots, power stations, and job site equipment compared."
-};
 ---
-<BaseLayout title="Guides — Construction Estimating & Home-Service Lead Generation" description="Expert guides on construction estimating, commercial bidding, and paid ads for home-service businesses. Learn how tradies can capture more leads." jsonLd={jsonLd}>
-  <section class="hero" style="padding-bottom:2rem">
-    <div class="container">
-      <h1>Expert Guides <span style="color:#3b82f6">for Trades & Contractors</span></h1>
-      <p>Construction estimating guides <span style="color:#64748b">+</span> paid ads playbooks for home-service businesses looking to scale.</p>
-    </div>
-  </section>
 
-  <section class="container" style="padding-bottom:4rem">
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:1.5rem">
-      {posts.map(post => (
-        <a href={post.path} style="text-decoration:none;color:inherit">
-          <div class="card blog-card">
-            <span class="tag" style="margin-bottom:0.75rem">{post.tag}</span>
-            <h3 style="margin-bottom:0.5rem;font-size:1.1rem;color:#e2e8f0">{post.title}</h3>
-            <p style="margin:0 0 0.5rem;font-size:0.9rem">{post.desc}</p>
-            <span style="font-size:0.8rem;color:#64748b">{post.date}</span>
-          </div>
-        </a>
+<BaseLayout>
+  <div className="container mx-auto p-4 pt-6 md:p-6 lg:p-12 xl:p-24" style="max-width: 800px">
+    <h1 className="text-3xl text-center">Blog</h1>
+    <hr className="mb-8" />
+    <ul>
+      {postList.map((post) => (
+        <li key={post.slug} className="mb-4">
+          <article>
+            <h2 className="text-xl font-bold mb-2">
+              <a
+                href={post.slug}
+                className="text-gray-900 dark:text-gray-100 hover:text-blue-600"
+              >
+                {post.title}
+              </a>
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              {post.description}
+            </p>
+            <p className="text-gray-600 dark:text-gray-300">
+              Published on {post.publishedDate}
+            </p>
+          </article>
+        </li>
       ))}
-    </div>
-  </section>
+    </ul>
+  </div>
 </BaseLayout>
