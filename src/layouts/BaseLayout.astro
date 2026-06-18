@@ -12,6 +12,27 @@ export interface Props {
 const { title, description, canonical, image, type = 'website', publishedTime, jsonLd } = Astro.props;
 const siteUrl = 'https://www.partenairecroissance.com';
 const defaultImage = '/icons/icon-512x512.png';
+
+// Auto-enhance jsonLd with NewsArticle defaults for Discover eligibility
+const enhancedJsonLd = jsonLd ? {
+  ...jsonLd,
+  "@type": jsonLd["@type"] === "Article" ? "NewsArticle" : jsonLd["@type"],
+  dateModified: jsonLd.dateModified || jsonLd.datePublished || publishedTime,
+  author: jsonLd.author || {
+    "@type": "Organization",
+    "name": "Partenaire Croissance",
+    "url": `${siteUrl}/about/`
+  },
+  publisher: jsonLd.publisher || {
+    "@type": "Organization",
+    "name": "Partenaire Croissance",
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/icons/icon-512x512.png`
+    }
+  },
+  isAccessibleForFree: true
+} : null;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +86,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="twitter:image" content={image || `${siteUrl}${defaultImage}`} />
   
   <!-- JSON-LD -->
-  {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  {enhancedJsonLd && <script type="application/ld+json" set:html={JSON.stringify(enhancedJsonLd)} />}
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
